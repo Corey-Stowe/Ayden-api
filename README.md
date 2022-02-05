@@ -8,18 +8,31 @@ For checking and fighting with Faurd and Risk
 Your link/?cc=cc|mm|yy|cvc and will show reslut:
 
 {
-    "CC": "",
-    "MM": "",
-    "YY": "",
-    "status": "",
-    "reason": "",
-    "Farud Code": "",
-    "accountScore": ,
-    "Country": "",
-    "Cank": "",
-    "Card Type": "",
-    "Type": "",
-    "author": "Stowe chk"
+   
+   "CC": "",
+    
+   "MM": "",
+   
+   "YY": "",
+    
+   "status": "",
+   
+   "reason": "",
+   
+   "Farud Code": "",
+   
+   "accountScore": ,
+   
+   "Country": "",
+    
+   "Bank": "",
+    
+   "Card Type": "",
+    
+   "Type": "",
+   
+   "author": "Stowe chk"
+   
 }
 **Method 2: Use Post**
 cc=cc|mm|yy|cvc
@@ -27,15 +40,29 @@ cc=cc|mm|yy|cvc
 And will show reslut for you:
 
 {
-    "CC": "",
-    "MM": "",
-    "YY": "",
-    "status": "",
-    "reason": "",
-    "Farud Code": "",
-    "accountScore": ,
-    "Country": "",
-    "Cank": "",
-    "Card Type": "",
-    "Type": "",
-    "author": "Stowe chk"
+   
+   "CC": "",
+    
+   "MM": "",
+   
+   "YY": "",
+    
+   "status": "",
+   
+   "reason": "",
+   
+   "Farud Code": "",
+   
+   "accountScore": ,
+   
+   "Country": "",
+    
+   "Bank": "",
+    
+   "Card Type": "",
+    
+   "Type": "",
+   
+   "author": "Stowe chk"
+   
+}
