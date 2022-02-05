@@ -4,10 +4,19 @@ const express = require('express')
 const fetch = require('node-fetch')
 const query = require('readline-sync')
 const app = express();
-    
-app.get("/", function(req,res){
-//var list = query.question("Enter Credit Card:");
-var list = req.query.cc
+var bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.all("/", function(req,res){
+    if (req.method == 'GET'){
+      var list = req.query.cc
+    }
+  if (req.method == 'POST'){
+    var list = req.body.cc
+  }
+    if (list == ''){
+      res.end({'error':'Missing data!'})
+    }
     var regex= new RegExp("^d{15,16}|d{1,2}|d{2,4}|d{3,4}$")
     try{
         regex.test(list)
@@ -69,23 +78,23 @@ var list = req.query.cc
       'reason':data.refusalReason,
       'AVS':data.additionalData.avsResult,
       'Farud Code':data.additionalData.fraudResultType,
-      'Faurd Score':data.fraudResult.accountScore,
+      'accountScore':data.fraudResult.accountScore,
       'CVC':data.additionalData.cvcResult,
       'Country':data.additionalData.issuerCountry,
       'Cank':data.additionalData.cardIssuingBank,
       'Card Type':data.additionalData.paymentMethod,
       'Type':data.additionalData.fundingSource,
-      'author':'t.me/stowe_245'
+      'author':'Stowe chk'
     }
     console.log(results)
     //url : https://ayden.vovabj.repl.co/?cc=5189410024831409%7C08%7C2023%7C849
     res.end(JSON.stringify(results,null,4))
  })
 }catch{
-       res.end('Baka wrong requets !')}}
+       res.end('Processing the card')}}
 )
 app.listen(80, () => {
-  console.log(`App started (Ayden Api AVS)`)
+  console.log(`Example app listening at http://localhost:3000`)
 })
 
 
