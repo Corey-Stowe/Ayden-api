@@ -31,7 +31,6 @@ Your link/?cc=cc|mm|yy|cvc and will show reslut:
     
    "Type": "",
    
-   "author": "Stowe chk"
    
 }
 **Method 2: Use Post**
@@ -62,7 +61,5 @@ And will show reslut for you:
    "Card Type": "",
     
    "Type": "",
-   
-   "author": "Stowe chk"
    
 }
